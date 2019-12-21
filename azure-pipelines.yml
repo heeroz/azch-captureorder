@@ -40,7 +40,7 @@ stages:
 
   variables:
   - name: k8sNamespace # Kubernetes Namespace to deploy to. This variable is scoped to the DeployDev stage.
-    value: 'dev2'
+    value: 'dev'
       
   jobs:
   - deployment: DeployDev
@@ -48,7 +48,7 @@ stages:
     pool:
       vmImage: ubuntu-latest
 
-    environment: 'aksworkshop01.dev2' # name of the environment to target [env name.namespace]. This will pull in the Kubernetes service connection automatically
+    environment: 'aksworkshop01.dev' # name of the environment to target [env name.namespace]. This will pull in the Kubernetes service connection automatically
 
     strategy:
       runOnce:
